@@ -9,11 +9,11 @@ ENV PYTHONUNBUFFERED 1
 
 #[Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends postgresql-client \
+    && apt-get -y install --no-install-recommends postgresql-client python3-venv \
     && rm -rf /var/lib/apt/lists/*
 
 # Install pipenv so onCreateCommand can install project dependencies
-RUN pip3 --disable-pip-version-check --no-cache-dir install pipenv
+RUN python3 -m pip --disable-pip-version-check --no-cache-dir install pipenv
 
 
 
