@@ -9,7 +9,14 @@ ENV PYTHONUNBUFFERED 1
 
 #[Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends postgresql-client
+    && apt-get -y install --no-install-recommends \
+        postgresql-client \
+        python3-venv \
+        pipenv \
+    && rm -rf /var/lib/apt/lists/*
+
+# The Debian pipenv package places the CLI in /usr/bin so it is available to
+# every user, including the default "codespace" user that runs onCreateCommand.
 
 
 
