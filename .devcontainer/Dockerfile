@@ -19,3 +19,5 @@ RUN python3 -m pip --disable-pip-version-check --no-cache-dir install \
 
 
 
+# Install pipenv so onCreateCommand can install project dependencies
+RUN pip3 --disable-pip-version-check --no-cache-dir install pipenv
