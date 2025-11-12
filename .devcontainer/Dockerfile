@@ -1,6 +1,6 @@
-FROM mcr.microsoft.com/devcontainers/python:3.11
+OM mcr.microsoft.com/devcontainers/python:3.13
 
-ENV PYTHONUNBUFFERED=1
+ENV PYTHONUNBUFFERED 1
 
 # [Optional] If your requirements rarely change, uncomment this section to add them to the image.
 # COPY requirements.txt /tmp/pip-tmp/
